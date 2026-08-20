@@ -5,8 +5,6 @@ import { Button } from "@/components/ui/Button";
 import { getCloudinaryConfig } from "@/services/cloudinary/cloudinaryService";
 import { toastSuccess } from "@/stores/toastStore";
 
-console.log(import.meta.env.VITE_CLOUDINARY_CLOUD_NAME);
-console.log(import.meta.env.VITE_CLOUDINARY_UPLOAD_PRESET);
 
 export function SettingsPage() {
   const navigate = useNavigate();
