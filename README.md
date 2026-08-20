@@ -17,7 +17,7 @@ Gratis is an AI-powered image design and editing platform — one place for prof
 
 ## Overview
 
-Creating a professional image usually means juggling multiple tools — one for design, another for editing, another for background removal, another for AI transformations. And the most useful features are almost always behind a paywall.
+Creating a professional image usually means juggling multiple tools one for design, another for editing, another for background removal, another for AI transformations. And the most useful features are almost always behind a paywall.
 
 Gratis brings the entire workflow into a single editor, built around one idea:
 
@@ -64,7 +64,7 @@ Gratis brings the entire workflow into a single editor, built around one idea:
 
 ```bash
 # Clone the repository
-git clone YOUR_REPOSITORY_URL
+git clone https://github.com/Joystonm/Gratis.git
 cd gratis
 
 # Install dependencies
