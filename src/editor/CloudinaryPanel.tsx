@@ -138,6 +138,17 @@ function NoImageSelected() {
   )
 }
 
+// ─── helper: preload a URL and resolve true/false ────────────────────────────
+
+function probeImageUrl(url: string): Promise<boolean> {
+  return new Promise(resolve => {
+    const img = new Image()
+    img.onload  = () => resolve(true)
+    img.onerror = () => resolve(false)
+    img.src = url
+  })
+}
+
 // ─── hook: apply a cloudinary transform ──────────────────────────────────────
 
 function useApplyTransform(image: ImageLayer | undefined) {
@@ -153,6 +164,15 @@ function useApplyTransform(image: ImageLayer | undefined) {
     try {
       const url = urlFn()
       if (!url) throw new Error('Failed to build transform URL')
+
+      // Verify the transformed URL actually loads before replacing the layer src.
+      // Cloudinary returns a 400 image (broken) for invalid/unsupported transforms —
+      // probing with an Image element catches this without a CORS-blocked fetch.
+      const ok = await probeImageUrl(url)
+      if (!ok) {
+        throw new Error('Transformation failed — this effect may require a paid Cloudinary plan or the parameters are invalid')
+      }
+
       updateLayer(image.id, { src: url })
       pushHistory(label)
       toastSuccess(label, 'Transformation applied')
@@ -422,7 +442,7 @@ function AdjustTab({ image }: { image: ImageLayer }) {
       <Row label="Rounded">
         <div className="flex gap-2 items-center">
           <MiniSlider value={rounded} min={0} max={500} onChange={setRounded} />
-          <button onClick={() => apply('rounded', () => buildRoundedUrl(pid, rounded || 'max'), 'Round corners')} disabled={!!busy} className="text-xs bg-editor-surface border border-editor-border text-editor-text px-2 py-1 rounded hover:border-accent/40 disabled:opacity-40 shrink-0">Apply</button>
+          <button onClick={() => apply('rounded', () => buildRoundedUrl(pid, rounded === 0 ? 'max' : rounded), 'Round corners')} disabled={!!busy} className="text-xs bg-editor-surface border border-editor-border text-editor-text px-2 py-1 rounded hover:border-accent/40 disabled:opacity-40 shrink-0">Apply</button>
         </div>
       </Row>
       <button onClick={() => apply('circle', () => buildRoundedUrl(pid, 'max'), 'Circle crop')} disabled={!!busy} className="w-full py-1.5 rounded border border-editor-border text-xs text-editor-text hover:bg-editor-surface hover:border-accent/30 transition-all disabled:opacity-40">

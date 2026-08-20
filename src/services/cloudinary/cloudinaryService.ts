@@ -445,9 +445,11 @@ export function buildTextOverlayUrl(opts: TextOverlayOptions): string {
     background,
   } = opts
 
-  // Cloudinary text overlay format: l_text:font_size:text
+  // Cloudinary text overlay format: l_text:FontName_size:text
+  // Spaces in font names must be replaced with underscores
   const textEncoded = encodeURIComponent(text).replace(/%20/g, '_')
-  const fontSpec = `${font}_${fontSize}${fontWeight === 'bold' ? '_bold' : ''}`
+  const fontName = font.replace(/\s+/g, '_')
+  const fontSpec = `${fontName}_${fontSize}${fontWeight === 'bold' ? '_bold' : ''}`
 
   const overlaySeg: TransformSegment = {
     l: `text:${fontSpec}:${textEncoded}`,
