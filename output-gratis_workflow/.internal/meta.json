@@ -1,0 +1,39 @@
+{
+  "executions": [
+    {
+      "execution_id": "0cd82fc8-acc9-4806-8376-f885c6ea7d5c",
+      "run_kind": "author",
+      "status": "broken",
+      "valid": true,
+      "at": "2026-08-19T19:37:18.111Z"
+    },
+    {
+      "execution_id": "daacea82-6191-455c-9457-80fe033117f6",
+      "run_kind": "author",
+      "status": "broken",
+      "valid": false,
+      "at": "2026-08-19T19:51:04.268Z"
+    },
+    {
+      "execution_id": "e1aab136-f887-4d9a-bc5e-b3202d23b688",
+      "run_kind": "author",
+      "status": "broken",
+      "valid": false,
+      "at": "2026-08-19T19:57:15.634Z"
+    },
+    {
+      "execution_id": "44d91057-9fa6-4ea5-bfa3-c1cc507934a6",
+      "run_kind": "author",
+      "status": "broken",
+      "valid": false,
+      "at": "2026-08-20T03:31:47.099Z"
+    }
+  ],
+  "commit_id": "0c9be039-2eb6-49dd-bea6-76f2ce0284e1",
+  "testcase_id": "01M0DS4S6NEFZ6KQVW6XD62BT1",
+  "test_id": "69afdabb-35ff-43ea-9086-125a7480dc90",
+  "project_id": "01KB2TEA3SAXGRD6E2J40AN24K",
+  "folder_id": "01KB2TEA49BHZQZEGX1J3CQME4",
+  "org_id": "2910448",
+  "session_name": "gratis_workflow"
+}
