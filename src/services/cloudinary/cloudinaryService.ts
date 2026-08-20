@@ -179,6 +179,8 @@ export type CloudinaryEffect =
   | 'oil_paint'
   | 'vignette'
   | 'tilt_shift'
+  | 'sketch'
+  | 'trim'
 
 export interface EffectOptions {
   publicId: string
