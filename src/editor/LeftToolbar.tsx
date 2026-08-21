@@ -1,6 +1,6 @@
 import {
   MousePointer2, LayoutTemplate, Image as ImageIcon, Upload, Type,
-  Shapes, Wallpaper, Wand2, Grid, FolderOpen, Layers, Cloud
+  Shapes, Wallpaper, Wand2, FolderOpen, Layers, Cloud
 } from 'lucide-react'
 import { useEditorStore, type EditorTool, type SidebarPanel } from '@/stores/editorStore'
 import { IconButton } from '@/components/ui/IconButton'
@@ -27,7 +27,6 @@ const PANEL_ENTRIES: ToolEntry[] = [
   { id: 'shapes',     type: 'panel', icon: Shapes,         tooltip: 'Shapes'          },
   { id: 'background', type: 'panel', icon: Wallpaper,      tooltip: 'Background'      },
   { id: 'ai',         type: 'panel', icon: Wand2,          tooltip: 'Local Tools'     },
-  { id: 'elements',   type: 'panel', icon: Grid,           tooltip: 'Elements'        },
   { id: 'cloudinary', type: 'panel', icon: Cloud,          tooltip: 'Image Tools', accent: true },
 ]
 
