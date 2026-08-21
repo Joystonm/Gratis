@@ -33,7 +33,7 @@ Gratis puts the full workflow in one place. It runs entirely in the browser, req
 
 ## What It Is
 
-Gratis is a canvas-based design editor built on React-Konva. You start from a blank canvas or a template, stack images, text, and shapes in layers, apply local or cloud-powered effects, and export at up to 3× resolution.
+Gratis is a AI powered design editor built on React-Konva. You start from a blank canvas or a template, stack images, text, and shapes in layers, apply local or cloud-powered effects, and export at up to 3× resolution.
 
 Everything is stored in IndexedDB. No server, no login, no data leaving the browser unless you explicitly upload to Cloudinary.
 
