@@ -1,0 +1,14 @@
+{
+  "hooks": [
+    {
+      "name": "lint-on-save",
+      "trigger": "postToolUse",
+      "matcher": "write",
+      "action": {
+        "type": "command",
+        "command": "npm run lint --silent 2>&1 | head -30"
+      },
+      "timeout": 30
+    }
+  ]
+}
