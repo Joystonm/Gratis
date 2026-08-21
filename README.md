@@ -25,7 +25,7 @@ Creating a single professional image usually means bouncing between four or five
 - Squoosh or TinyPNG for compression
 - A paid app for AI enhancement or art filters
 
-The tools that actually matter — AI background removal, generative fill, upscaling, art filters — sit behind a paywall almost everywhere.
+The tools that actually matter - AI background removal, generative fill, upscaling, art filters sit behind a paywall almost everywhere.
 
 Gratis puts the full workflow in one place. It runs entirely in the browser, requires no account, and surfaces Cloudinary's AI capabilities without ever touching a server or exposing an API secret.
 
@@ -68,10 +68,9 @@ Everything is stored in IndexedDB. No server, no login, no data leaving the brow
 - White-background removal via threshold (Canvas API, fully offline)
 - Crop, corner radius, border, drop shadow, blend modes
 
-### Cloudinary AI Features *(optional — see setup)*
+### Cloudinary AI Features
 
 - AI background removal, image enhancement, upscaling
-- Generative fill, generative object removal
 - 21 art filters: Hokusai, Aurora, Daguerre, Zorro, Peacock, and more
 - Color adjustments: vibrance, fill light, vignette, tint
 - Format conversion (WebP, AVIF, PNG, JPG) with quality control
@@ -241,26 +240,6 @@ Seven flows cover the full user journey: creating a design, uploading images, us
 
 ---
 
-## Demo Walkthrough
-
-The fastest way to see everything working end-to-end:
-
-1. Open `http://localhost:5173`
-2. Click **Start Creating Free** → select **Instagram Post (1080×1080)**
-3. Open **Shapes** → add a rectangle → change its fill color in the Properties panel
-4. Open **Text** → click **Add a heading** → double-click the text on canvas → type something
-5. Open **Uploads** → drag in any image → it lands centered on the canvas
-6. Select the image layer → open **Properties** → adjust brightness and contrast
-7. Press `Ctrl+S` → see the save toast
-8. Click **Export** → choose PNG at 2× → download
-
-With Cloudinary configured, after uploading an image:
-
-9. Open **AI Tools** → click **Remove Background**
-10. Open **Image Tools** → **Filters** tab → click any art filter (Hokusai or Aurora are good ones to try)
-
----
-
 ## Project Structure
 
 ```
@@ -299,8 +278,3 @@ Features worth building next, not promises:
 - **Video still extraction** — pull a frame from a video and drop it onto the canvas
 - **Plugin API** — third-party panels that hook into the editor store
 
----
-
-## License
-
-MIT
